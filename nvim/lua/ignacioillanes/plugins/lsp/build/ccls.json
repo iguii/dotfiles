@@ -1,0 +1,6 @@
+[
+  {
+    "directory": "/usr/local/opt/llvm/build",
+    "arguments": ["/usr/bin/gcc -o "]
+  }
+]
