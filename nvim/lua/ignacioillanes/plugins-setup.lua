@@ -116,6 +116,9 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+	-- golang config
+	use("ray-x/go.nvim")
+
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tag

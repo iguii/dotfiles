@@ -16,6 +16,7 @@ require("ignacioillanes.plugins-setup")
 require("ignacioillanes.core.options")
 require("ignacioillanes.core.keymaps")
 require("ignacioillanes.core.colorscheme")
+require("ignacioillanes.core.commands")
 
 -- Plugins
 -- require("ignacioillanes.plugins.nvim-tmux-navigation")
