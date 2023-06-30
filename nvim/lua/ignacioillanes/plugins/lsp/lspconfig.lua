@@ -1,23 +1,30 @@
 -- import lspconfig plugin safely
 local lspconfig_status, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status then
+	error("Error loading lspconfig" .. lspconfig)
 	return
 end
 
 -- import cmp-nvim-lsp plugin safely
 local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not cmp_nvim_lsp_status then
+	error("Error loading cmp_nvim_lsp" .. cmp_nvim_lsp)
 	return
 end
 
 -- import typescript plugin safely
 local typescript_setup, typescript = pcall(require, "typescript")
 if not typescript_setup then
+	error("Error loading typescript" .. typescript)
 	return
 end
 
 -- import tailwindcss-colors plugin safely
 local tailwindcss_colors_setup, tailwindcss_colors = pcall(require, "tailwindcss-colors")
+if not tailwindcss_colors_setup then
+	error("Error loading tailwindcss-colors" .. tailwindcss_colors)
+	return
+end
 
 -- -- import java plugin safely
 -- local jdtls_setup, jdtls = pcall(require, "jdtls")
@@ -141,6 +148,24 @@ lspconfig["emmet_ls"].setup({
 lspconfig["pyre"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+})
+
+-- configure go server
+lspconfig["gopls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = { "gopls" },
+	filetypes = { "go", "gomod", "gowork", "gotmpl" },
+	root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
+	settings = {
+		gopls = {
+			completeUnimported = true,
+			usePlaceholders = true,
+			analyses = {
+				unusedparams = true,
+			},
+		},
+	},
 })
 
 -- -- configure arduino server

@@ -54,6 +54,7 @@ return require("packer").startup(function(use)
 	-- essential plugins
 	use("tpope/vim-surround") --for sorroundings and replacements
 	use("vim-scripts/ReplaceWithRegister")
+	use("karb94/neoscroll.nvim") -- smooth scrolling
 
 	-- commenting with gc
 	use("numToStr/Comment.nvim")
@@ -115,9 +116,6 @@ return require("packer").startup(function(use)
 			ts_update()
 		end,
 	})
-
-	-- golang config
-	use("ray-x/go.nvim")
 
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...

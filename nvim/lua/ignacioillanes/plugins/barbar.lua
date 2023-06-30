@@ -1,5 +1,6 @@
 local buffeline_status, bufferline = pcall(require, "bufferline")
 if not buffeline_status then
+	error("Error loading bufferline" .. bufferline)
 	return
 end
 

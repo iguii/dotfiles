@@ -1,6 +1,7 @@
 -- import null-ls plugin safely
 local setup, null_ls = pcall(require, "null-ls")
 if not setup then
+	error("Error loading null-ls" .. null_ls)
 	return
 end
 
@@ -22,6 +23,11 @@ null_ls.setup({
 				return utils.root_has_file(".eslintrc.cjs") -- change file extension if you use something else
 			end,
 		}),
+
+		-- go formatter
+		formatting.gofmt,
+		formatting.goimports_reviser,
+		formatting.golines,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)

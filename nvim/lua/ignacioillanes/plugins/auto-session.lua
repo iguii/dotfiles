@@ -1,5 +1,6 @@
 local status, auto_session = pcall(require, "auto-session")
 if not status then
+	error("Error loading auto-session" .. auto_session)
 	return
 end
 

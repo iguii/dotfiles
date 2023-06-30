@@ -2,6 +2,7 @@ local home = os.getenv("HOME")
 
 local dashboard_status, db = pcall(require, "dashboard")
 if not dashboard_status then
+	error("Error loading dashboard" .. db)
 	return
 end
 

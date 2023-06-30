@@ -140,11 +140,6 @@ _G.packer_plugins = {
     path = "/Users/ignacioillanes/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["go.nvim"] = {
-    loaded = true,
-    path = "/Users/ignacioillanes/.local/share/nvim/site/pack/packer/start/go.nvim",
-    url = "https://github.com/ray-x/go.nvim"
-  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/Users/ignacioillanes/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -179,6 +174,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ignacioillanes/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/Users/ignacioillanes/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,

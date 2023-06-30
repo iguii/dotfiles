@@ -1,10 +1,12 @@
 local status, lualine = pcall(require, "lualine")
 if not status then
+	error("Error loading lualine" .. lualine)
 	return
 end
 
 local git_blame_status, git_blame = pcall(require, "gitblame")
 if not git_blame_status then
+	error("Error loading gitblame" .. git_blame)
 	return
 end
 vim.g.gitblame_display_virtual_text = 0 -- disable virtual text

@@ -1,5 +1,6 @@
 local status, dapui = pcall(require, "dapui")
 if not status then
+	error("Error loading dapui" .. dapui)
 	return
 end
 

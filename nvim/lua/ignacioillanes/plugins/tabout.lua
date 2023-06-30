@@ -1,5 +1,6 @@
 local ok, tabout = pcall(require, "tabout")
 if not ok then
+	error("Error loading tabout" .. tabout)
 	return
 end
 
