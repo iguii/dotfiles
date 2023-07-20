@@ -124,6 +124,13 @@ return require("packer").startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 	use({ "f-person/git-blame.nvim", wants = { "lualine" } }) -- show git blame on the right hand side
+	use({
+		"kdheepak/lazygit.nvim",
+		-- optional for floating window border decoration
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
 
 	-- dashboard
 	-- use("glepnir/dashboard-nvim")
@@ -138,8 +145,6 @@ return require("packer").startup(function(use)
 		wants = { "nvim-treesitter" }, -- or require if not used so far
 		after = { "nvim-cmp" }, -- if a completion plugin is using tabs load it before
 	})
-
-	use("stevearc/vim-arduino")
 
 	------- END OF PLUGINS ---------
 

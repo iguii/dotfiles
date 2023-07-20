@@ -145,6 +145,11 @@ _G.packer_plugins = {
     path = "/Users/ignacioillanes/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/Users/ignacioillanes/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/Users/ignacioillanes/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -296,11 +301,6 @@ _G.packer_plugins = {
     path = "/Users/ignacioillanes/.local/share/nvim/site/pack/packer/start/typescript.nvim",
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   },
-  ["vim-arduino"] = {
-    loaded = true,
-    path = "/Users/ignacioillanes/.local/share/nvim/site/pack/packer/start/vim-arduino",
-    url = "https://github.com/stevearc/vim-arduino"
-  },
   ["vim-nightfly-colors"] = {
     loaded = true,
     path = "/Users/ignacioillanes/.local/share/nvim/site/pack/packer/start/vim-nightfly-colors",
@@ -321,14 +321,14 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-treesitter ]]
+vim.cmd [[ packadd nvim-ts-autotag ]]
 vim.cmd [[ packadd nvim-cmp ]]
 vim.cmd [[ packadd tabout.nvim ]]
 
 -- Config for: tabout.nvim
 try_loadstring("\27LJ\2\n=\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\"ignacioillanes.plugins.tabout\frequire\0", "config", "tabout.nvim")
 
-vim.cmd [[ packadd nvim-treesitter ]]
-vim.cmd [[ packadd nvim-ts-autotag ]]
 time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
